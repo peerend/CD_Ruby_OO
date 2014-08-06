@@ -1,4 +1,4 @@
-
+require 'album'
 
 class Artists
 
@@ -29,5 +29,14 @@ class Artists
       artist_array.push(ind_artist.artist)
     end
     artist_array
+  end
+
+  def edit_artist(new_artist)
+    @artist = new_artist
+  end
+
+  def add_album(album_input)
+    new_album = Albums.new(album_input)
+    @albums << new_album
   end
 end

@@ -10,7 +10,7 @@ describe 'Albums' do
     test_album = Albums.new('ziggy stardust')
     expect(test_album).to be_an_instance_of Albums
   end
-  
+
   it 'saves albums' do
     test_album = Albums.new("Bastard")
     test_album.save

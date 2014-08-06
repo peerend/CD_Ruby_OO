@@ -23,4 +23,25 @@ describe 'Artists' do
     test_artist2 = Artists.new("Ziggy").save
     expect(Artists.artist_arr).to eq ['Bowie', 'Ziggy']
   end
+
+  it 'allows the user to edit an artist' do
+    test_cd = Artists.new('David')
+    test_cd.save
+    test_cd.edit_artist("david bowie")
+    expect(Artists.all[0].artist).to eq ("david bowie")
+  end
+
+  it 'it adds a album to a artist' do
+    test_artist = Artists.new('Bowie')
+    test_artist.save
+    test_artist.add_album("Toy")
+    expect(test_artist.albums[0].album).to eq "Toy"
+  end
+  it 'it adds multiple albums to a artist' do
+    test_artist = Artists.new('Bowie')
+    test_artist.save
+    test_artist.add_album("Toy")
+    test_artist.add_album("Scary Monsters")
+    expect(test_artist.albums[1].album).to eq "Scary Monsters"
+  end
 end
