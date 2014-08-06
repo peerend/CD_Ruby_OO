@@ -1,5 +1,3 @@
-require 'album'
-
 class Artists
 
   @@all_artists = []

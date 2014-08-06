@@ -1,5 +1,3 @@
-require './lib/artist'
-
 class Albums
   @@all_albums
 
