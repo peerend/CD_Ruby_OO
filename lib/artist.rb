@@ -23,4 +23,11 @@ class Artists
     @albums = []
   end
 
+  def Artists.artist_arr
+    artist_array = []
+    @@all_artists.each do |ind_artist|
+      artist_array.push(ind_artist.artist)
+    end
+    artist_array
+  end
 end
